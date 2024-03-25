@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PosPrinterWinForms": {
+      "commandName": "Project"
+    },
+    "RDMSoketPrinter": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Printer Example</title>
+    <script type="module">
+      import ticketPrinter from './src/ticketPrinter.js';
+
+    const data = {
+      "data_header": {
+        "lines": [
+          "Nombre de la Empresa",
+          "Direccion de la Empresa",
+          "Telefono: 123-456-7890",
+          "Email: info@empresa.com"
+        ]
+      },
+      "data_client": {
+        "nombre": "Juan Prrez",
+        "identificacion": "123456789",
+        "direccion": "Calle Principal #123",
+        "telefono": "555-1234",
+        "email": "juan.perez@example.com"
+      },
+      "data_invoice": {
+        "numero_factura": "F001",
+        "fecha_emision": "2023-06-15",
+        "metodo_pago": "Efectivo",
+        "subtotal": 100.00,
+        "impuesto": 15.00,
+        "total": 115.00,
+        "pagado": 120.00,
+        "vuelto": 5.00
+      },
+      "data_invoice_items": [
+        {
+          "descripcion": "Producto 1",
+          "cantidad": 2,
+          "precio_unitario": 25.00,
+          "subtotal": 50.00
+        },
+        {
+          "descripcion": "Producto 2",
+          "cantidad": 1,
+          "precio_unitario": 50.00,
+          "subtotal": 50.00
+        }
+      ],
+      "data_footer": {
+        "lines": [
+          "Gracias por su compra",
+          "Lo esperamos en su próxima visita",
+          "Horario de atención: Lunes a Viernes de 9:00 a 18:00",
+          "Síguenos en nuestras redes sociales"
+        ]
+      }
+    };
+
+    const CostaRicanInvoice = {
+      "data_header": {
+      "lines": [
+        "Nombre de la Empresa",
+        "Dirección de la Empresa",
+        "Telefono: 123-456-7890",
+        "Email: info@empresa.com",
+        "Cedula Jurídica: 3-101-123456"
+      ]
+      },
+      "data_receiver": {
+        "nombre": "Nombre del Receptor",
+        "identificacion_tipo": "02",
+        "identificacion_numero": "987654321"
+      },
+      "data_invoice": {
+        "clave": "50623081800310112345600100001010000000100100000000",
+        "consecutivo": "00100001010000000100",
+        "fecha_emision": "2023-06-23T12:00:00-06:00",
+        "condicion_venta": "01",
+        "plazo_credito": "0",
+        "medio_pago": [
+          "01"
+        ],
+        "moneda": "CRC",
+        "tipo_cambio": "1.00",
+        "servicios_gravados": 10000,
+        "servicios_exentos": 0,
+        "servicios_exonerados": 0,
+        "mercancias_gravadas": 5000,
+        "mercancias_exentas": 0,
+        "mercancias_exoneradas": 0,
+        "total_gravado": 15000,
+        "total_exento": 0,
+        "total_exonerado": 0,
+        "total_venta": 15000,
+        "total_descuentos": 0,
+        "total_venta_neta": 15000,
+        "total_impuestos": 1950,
+        "total_comprobante": 16950
+      },
+      "data_invoice_items": [
+        {
+          "descripcion": "Servicio 1",
+          "codigo": "001",
+          "cantidad": 1,
+          "unidad_medida": "Unid",
+          "precio_unitario": 10000,
+          "monto_total": 10000,
+          "subtotal": 10000,
+          "monto_total_linea": 10000,
+          "impuestos": [
+            {
+              "codigo": "01",
+              "tarifa": 13,
+              "monto": 1300
+            }
+          ]
+        },
+        {
+          "descripcion": "Producto 1",
+          "codigo": "P001",
+          "cantidad": 2,
+          "unidad_medida": "Unid",
+          "precio_unitario": 2500,
+          "monto_total": 5000,
+          "subtotal": 5000,
+          "monto_total_linea": 5000,
+          "impuestos": [
+            {
+            "codigo": "01",
+            "tarifa": 13,
+            "monto": 650
+            }
+          ]
+        }
+      ],
+      "data_references": [
+        {
+          "tipo_documento": "01",
+          "numero": "00100001010000000099",
+          "fecha_emision": "2023-06-22",
+          "codigo": "01",
+          "razon": "Anulación de factura"
+        }
+      ],
+      "data_other": {
+        "observaciones": "Observaciones adicionales",
+        "otros_cargos": [
+          {
+          "detalle": "Cargo adicional",
+          "monto": 500
+          }
+        ]
+      },
+        "data_footer": {
+        "lines": [
+          "Gracias por su compra",
+          "!Esperamos volver a servirle pronto!"
+        ]
+      }
+    }
+
+    async function printTicket() {
+      await ticketPrinter.printData(data, 'template1');
+    }
+
+    async function printTicket2() {
+      await ticketPrinter.printData(CostaRicanInvoice, 'templateCRInvoice');
+    }
+
+    window.onload = function() {
+    document.getElementById('printButton').addEventListener('click', printTicket);
+    document.getElementById('printButton2').addEventListener('click', printTicket2);
+    };
+  </script>
+  </head>
+
+  <body>
+    <h1>Ticket Printer Example</h1>
+    <button id="printButton">Print Template 1</button>
+    <button id="printButton2">Print Template 2</button>
+  </body>
+
+</html>
