@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Zebra Printer Example</title>
+      <script type="module">
+         import ticketPrinter from './src/ticketPrinter.js';
+
+      const jsonObject = {
+      "type": "label-printer",
+      "printer": "zebra",
+      "data": [`<file><label>
+            <variable name='tracking'>123456789</variable>
+            <variable name='recibofisico'>Recibo: ABC123</variable>
+            <variable name='nombrecliente'>Nombre del Cliente</variable>
+            <variable name='identificacioncliente'>C.I 1234567</variable>
+            <variable name='telefonocliente'>Telefono: 123-456-7890</variable>
+            <variable name='emailcliente'>Email:</variable>
+            <variable name='tipopaquete'>TIPO</variable>
+            <variable name='desdehasta'>Ruta Origen -> Ruta Destino</variable>
+            <variable name='destino'>Dirección de Destino</variable>
+            <variable name='destinol2'>Linea 2 de la Dirección</variable>
+            <variable name='destinol3'>Linea 3 de la Dirección</variable>
+            <variable name='nombrereceptor'>Nombre del Receptor</variable>
+            <variable name='identificacionreceptor'>C.I 7654321</variable>
+            <variable name='telefonoreceptor'>Telefono del Receptor</variable>
+            <variable name='descripcionpaquete'>Descripción del Paquete</variable>
+            <variable name='cantidadpaquete'>Paquete 1 de 3</variable>
+            <variable name='destinocodigo'>Código de la Ruta de Destino</variable>
+            <variable name='rutawaze'>https://waze.com/ul?ll=latitud,longitud%26z=10</variable>
+         </label></file>`]
+      }
+   
+
+    async function printLabel() {
+      await ticketPrinter.printLabel(jsonObject);
+    }
+
+    window.onload = function() {
+    document.getElementById('printButton').addEventListener('click', printLabel);
+    };
+  </script>
+   </head>
+
+   <body>
+      <h1>Ticket Printer Example</h1>
+      <button id="printButton">Print Label zebra</button>
+   </body>
+
+</html>

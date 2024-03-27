@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Security.Cryptography;
@@ -19,7 +20,6 @@ namespace PosPrinterWinForms
         const int PORT_NO = 4500;
         static Socket serverSocket;
         static private string guid = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
-        private bool cerrar = false;
         private static readonly object _lock = new object();
 
         public frmPrincipal()
@@ -47,7 +47,7 @@ namespace PosPrinterWinForms
         private static void OnAccept(IAsyncResult result)
         {
             
-                byte[] buffer = new byte[4096000];
+                byte[] buffer = new byte[16384];
                 try
                 {
                     Socket client = null;
@@ -81,28 +81,39 @@ namespace PosPrinterWinForms
 
                         try
                         {
-                            // Intenta deserializar el JSON
-                            Body JsonString = JsonSerializer.Deserialize<Body>(browserSent);
-                            var type = JsonString.type;
-                            var printer = JsonString.printer;
-                            IList<string> data = JsonString.data;
+                      
+                            dynamic JsonString = JsonSerializer.Deserialize<dynamic>(browserSent);
+
+                            var data = JsonString.GetProperty("data");
+                            var type = JsonString.GetProperty("type").GetString();
+                            var printer =  JsonString.GetProperty("printer").GetString();
+
+                            IList<string> dataList = new List<string>();
+
+                            if (data.ValueKind == JsonValueKind.Array)
+                            {
+                                foreach (var element in data.EnumerateArray())
+                                {
+                                    dataList.Add(element.GetString());
+                                }
+                            }
 
                             switch (type)
                             {
                                 case "label-printer":
-                                    ImprimirEtiqueta(data, printer);
+                                    ImprimirEtiqueta(dataList, printer);
                                     break;
                                 case "pos-printer":
-                                    ImprimirDocumentos(data, printer);
+                                    ImprimirDocumentos(dataList, "");
                                     break;
                                 default:
-                                    // Manejar otro tipo de objeto
                                     break;
                             }
-                        }
-                        catch (JsonException)
+                       }
+                        catch (JsonException ex)
                         {
-                            var JsonString = JsonSerializer.Deserialize<object>(browserSent);
+                        Console.WriteLine($"Exception: {ex.Message}");
+                        var JsonString = JsonSerializer.Deserialize<object>(browserSent);
                             ImprimirDocumento(JsonString.ToString());
                         }
 
@@ -119,7 +130,6 @@ namespace PosPrinterWinForms
                 }
                 catch (Exception ex)
                 {
-                    // Manejar otras excepciones
                     Console.WriteLine($"Exception: {ex.Message}");
                 }
                 finally
@@ -199,22 +209,11 @@ namespace PosPrinterWinForms
 
         public enum EOpcodeType
         {
-            /* Denotes a continuation code */
             Fragment = 0,
-
-            /* Denotes a text code */
             Text = 1,
-
-            /* Denotes a binary code */
             Binary = 2,
-
-            /* Denotes a closed connection */
             ClosedConnection = 8,
-
-            /* Denotes a ping*/
             Ping = 9,
-
-            /* Denotes a pong */
             Pong = 10
         }
 
@@ -283,7 +282,8 @@ namespace PosPrinterWinForms
             ImprimirEtiqueta imprimirEtiqueta;
             foreach (var xmlimprimir in xmlimprimirsh)
             {
-                switch (printer.ToLower()){
+                switch (printer.ToLower())
+                {
                     case "zebra":
                         zebraLabel zebra = new zebraLabel();
                         zebra.imprimir(helper.XmlToObject(xmlimprimir.ToString()));
@@ -311,15 +311,12 @@ namespace PosPrinterWinForms
                             airboxLabel.Imprimir(xml, nombreImpresora);
                         }
                         break;
-                        
+
                     default:
-                        
+
                         break;
                 }
-
-                
             }
-            
         }
 
         private static void ImprimirDocumentos(IList<string> documentos, string printer)
@@ -362,8 +359,7 @@ namespace PosPrinterWinForms
 
         public void escribirLog(string text)
         {
-            txtLog.AppendText(text);
-            txtLog.AppendText(Environment.NewLine);
+          
         }
 
         private void btnPrueba_Click(object sender, EventArgs e)
@@ -371,21 +367,15 @@ namespace PosPrinterWinForms
             
             try
             {
-                escribirLog("-------- Printing Test -------- ");
                 ImprimirDocumentoPrueba();
                 if (GlobalHelpers.configuracion.LabelPrinter)
                 { 
                     ImprimirEtiquetaPrueba();
                 }
-                escribirLog("----- Success -----");
             }
             catch (Exception ex)
             {
-                escribirLog("------------------ Error ------------------");
-                escribirLog(ex.StackTrace);
-                escribirLog(ex.Message);
                 notifyIcon1.Icon = SystemIcons.Warning;
-                escribirLog("---------------- End Error ----------------");
             }
         }
 
@@ -419,15 +409,9 @@ namespace PosPrinterWinForms
             DialogResult result = MessageBox.Show(" Are you sure that you want close the Socket printer services?", "Close the Socket printer services", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                cerrar = true;
                 notifyIcon1.Visible = false;
                 this.Close();
             }
-            else
-            {
-                cerrar = false;
-            }
-
         }
 
         public void minimize()
@@ -505,15 +489,6 @@ namespace PosPrinterWinForms
             }
         }
 
-    }
-
-    class Body
-    {
-        public string type { get; set; }
-        public string printer { get; set; }
-
-        //public string data { get; set; }
-        public IList<string> data { get; set; }
     }
 
 }

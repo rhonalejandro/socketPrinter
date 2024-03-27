@@ -41,3 +41,46 @@ D:\Programacion C#\repos\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\net
 D:\Programacion C#\repos\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\SdkApi.Desktop.dll
 D:\Programacion C#\repos\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Windows.winmd
 D:\Programacion C#\repos\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\ZebraPrinterSdk.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\appsettings.json
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\RDMSoketPrinter.exe
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\RDMSoketPrinter.deps.json
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\RDMSoketPrinter.runtimeconfig.json
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\RDMSoketPrinter.runtimeconfig.dev.json
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\RDMSoketPrinter.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\RDMSoketPrinter.pdb
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Csv.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\FluentFTP.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\SharpSnmpLib.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\SdkApi.Card.Core.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\SdkApi.Card.Desktop.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\SdkApi.Core.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\SdkApi.Desktop.Usb.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\SdkApi.Desktop.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\Windows.winmd
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\bin\x86\Debug\netcoreapp3.1\ZebraPrinterSdk.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\PosPrinterWinForms.csproj.AssemblyReference.cache
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\PosPrinterWinForms.frmPrincipal.resources
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\PosPrinterWinForms.csproj.GenerateResource.cache
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\PosPrinterWinForms.AssemblyInfoInputs.cache
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\PosPrinterWinForms.AssemblyInfo.cs
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\PosPrinterWinForms.csproj.CoreCompileInputs.cache
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\PosPrinterWinForms.csproj.CopyComplete
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\RDMSoketPrinter.dll
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\RDMSoketPrinter.pdb
+C:\Users\DesarrolloSng\Desktop\GitRhonald\sokectPrinter\PosPrinterWinForms\PosPrinterWinForms\obj\x86\Debug\netcoreapp3.1\PosPrinterWinForms.genruntimeconfig.cache

@@ -30,6 +30,15 @@ class ticketPrinter {
       }
    }
 
+   static async printLabel(jsonObject) {
+      try {
+         const response = await ticketPrinter.sendToSocket(JSON.stringify(jsonObject));
+         return { ok: true, message: response };
+      } catch (error) {
+         return { ok: false, message: 'Error al imprimir la etiqueta', error: error.message };
+      }
+   }
+
    static async sendToSocket(dataPrinter) {
       return new Promise((resolve, reject) => {
          let socket;

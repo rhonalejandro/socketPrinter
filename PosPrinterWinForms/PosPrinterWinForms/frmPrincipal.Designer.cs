@@ -50,8 +50,6 @@
             this.txtIp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chbAutoStart = new System.Windows.Forms.CheckBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtLog = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -63,7 +61,6 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -121,7 +118,6 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(30, 30);
             this.tabControl1.Name = "tabControl1";
@@ -257,29 +253,6 @@
             this.chbAutoStart.UseVisualStyleBackColor = true;
             this.chbAutoStart.CheckedChanged += new System.EventHandler(this.chbAutoStart_CheckedChanged);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.txtLog);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(427, 240);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Log";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // txtLog
-            // 
-            this.txtLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLog.Location = new System.Drawing.Point(3, 3);
-            this.txtLog.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtLog.Multiline = true;
-            this.txtLog.Name = "txtLog";
-            this.txtLog.ReadOnly = true;
-            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtLog.Size = new System.Drawing.Size(421, 234);
-            this.txtLog.TabIndex = 0;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -339,7 +312,6 @@
             this.label5.Size = new System.Drawing.Size(157, 21);
             this.label5.TabIndex = 3;
             this.label5.Text = "RDM Printer Socket";
-            
             // 
             // frmPrincipal
             // 
@@ -363,8 +335,6 @@
             this.tabPage1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -393,8 +363,6 @@
         private System.Windows.Forms.TextBox txtIp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chbAutoStart;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox txtLog;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
